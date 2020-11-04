@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label formArrayName="pharmacyAccts" *ngFor="let acct of acctsFormArray.controls; let i = index">
+        <input type="checkbox" [formControlName]="i">
+        {{acctsData[i].name}}
+    </label>
+    <button>submit</button>
+</form>
